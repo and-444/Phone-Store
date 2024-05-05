@@ -22,7 +22,7 @@
             </div>
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#">Каталог</a></li>
+                <li class="header__nav-item"><a href="#catalog">Каталог</a></li>
                 <li class="header__nav-item"><a href="#">О нас</a></li>
                 <li class="header__nav-item"><a href="#">Контакты</a></li>
               </ul>
@@ -49,8 +49,8 @@
           </div>
         </header>
         <main class="main">
-          <section class="content">
-            <div class="content__container">
+          <div class="content__container">
+            <section class="banner">
               <div class="content__banner">
                 <div class="content__banner-info">
                   <div class="content__banner-info-greeting">
@@ -103,8 +103,84 @@
                   <div class="swiper-pagination"></div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+            <section class="catalog" id="catalog">
+              <div class="catalog__filter">
+                <div class="catalog__filter-title">Категории</div>
+                <div class="catalog__filter-categories">
+                  <div class="catalog__filter-categories-item">iPhone</div>
+                  <div class="catalog__filter-categories-item">Samsung</div>
+                  <div class="catalog__filter-categories-item">Xiaomi</div>
+                </div>
+                <div class="catalog__filter-prop">
+                  <div class="catalog__filter-title">Цена, руб</div>
+                  <div class="catalog__filter-price">
+                    <div class="catalog__filter-wrapper">
+                      <input
+                        type="text"
+                        class="catalog__filter-input"
+                        id="input-0"
+                      />
+                      <input
+                        type="text"
+                        class="catalog__filter-input"
+                        id="input-1"
+                      />
+                    </div>
+                    <div
+                      class="catalog__filter-element"
+                      id="range-slider"
+                    ></div>
+                  </div>
+                </div>
+                <div class="catalog__filter-title">Память, Гб</div>
+                <div class="catalog__filter-memory">
+                  <div class="catalog__filter-memory-item">64 Гб</div>
+                  <div class="catalog__filter-memory-item">128 Гб</div>
+                  <div class="catalog__filter-memory-item">256 Гб</div>
+                  <div class="catalog__filter-memory-item">512 Гб</div>
+                  <div class="catalog__filter-memory-item">1024 Гб</div>
+                </div>
+                <div class="catalog__filter-title">Цвета</div>
+                <div class="catalog__filter-color">
+                  <div class="catalog__filter-color-item">
+                    <span class="red"></span>
+                  </div>
+                  <div class="catalog__filter-color-item">
+                    <span class="black"></span>
+                  </div>
+                  <div class="catalog__filter-color-item">
+                    <span class="blue"></span>
+                  </div>
+                </div>
+                <button class="catalog__filter-button-apply">Применить</button>
+                <div class="catalog__filter-button-reset">Сбросить</div>
+              </div>
+
+              <div class="catalog__items">
+                <div class="catalog__items-item">
+                  <div class="catalog__items-item-img">
+                    <img
+                      src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                      alt="iPhone-15-pro"
+                    />
+                  </div>
+                  <div class="catalog__items-item-info">iPhone 15 Pro</div>
+                  <div class="catalog__items-item-price">90 000руб.</div>
+                </div>
+                <div class="catalog__items-item">
+                  <div class="catalog__items-item-img">
+                    <img
+                      src="./img/phones/samsung-galaxy-s23-8-128gb.jpg"
+                      alt="iPhone-15-pro"
+                    />
+                  </div>
+                  <div class="catalog__items-item-info">Samsung Galaxy S23</div>
+                  <div class="catalog__items-item-price">50 000руб.</div>
+                </div>
+              </div>
+            </section>
+          </div>
         </main>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import "./index.html";
-import "./js/swiper-bundle.min";
 import "./index.scss";
-import { mult, sum } from "./modules/calc";
+import "./modules/swiper-bundle.min";
+import "./js/range-slider";
 
-console.log(mult(3, 4));
-console.log(sum(3, 4));
+console.log((3, 4));
+console.log((3, 4, 5, 6));
