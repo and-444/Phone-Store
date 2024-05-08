@@ -4,12 +4,13 @@ const rangeSlider = document.getElementById("range-slider");
 
 if (rangeSlider) {
   noUiSlider.create(rangeSlider, {
-    start: [500, 999999],
+    start: [500, 200000],
     connect: true,
     step: 1,
+    margin: 100,
     range: {
       min: [500],
-      max: [999999],
+      max: [200000],
     },
   });
 

@@ -1,0 +1,73 @@
+.contacts {
+    padding: 50px 0;
+    // .contacts__wrapper
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 140px;
+        padding: 50px 0;
+    }
+
+    // .contacts__info
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .contacts__title
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    // .contacts__main-ofice
+
+    &__main-ofice {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    // .contacts__main-ofice-main
+
+    &__main-ofice-main {
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(114, 114, 114, 0.5);
+    }
+
+    // .contacts__main-ofice-number
+
+    &__main-ofice-number {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    // .contacts__main-ofice-address
+
+    &__main-ofice-address {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    // .contacts__sales-department
+
+    &__sales-department {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    // .contacts__map
+
+    &__map {
+        iframe {
+            border-radius: 10px;
+        }
+    }
+}

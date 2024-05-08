@@ -1,0 +1,51 @@
+.about-us {
+    // .about-us__wrapper
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        background-color: $background-2;
+        border-radius: 10px;
+        padding: 50px 0;
+        gap: 50px;
+    }
+
+    // .about-us__about
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+    }
+
+    // .about-us__title
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    // .about-us__text
+
+    &__text {
+        font-size: 20px;
+        line-height: 140%;
+    }
+
+    // .about-us__img
+
+    &__img {
+        display: flex;
+        align-items: center;
+    }
+
+    // .about-us__img-link
+
+    &__img-link {
+        & img {
+            border-radius: 30px;
+            width: 250px;
+            height: 260px;
+        }
+    }
+}
