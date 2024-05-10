@@ -1,6 +1,7 @@
-@import "./libs/normalize";
-@import "./style/swiper-bundle.min";
-@import "./style/nouislider.min";
+@import "./style/_swiper-bundle.min";
+@import "./style/_nouislider.min";
+@import "./style/_graph-modal.min";
+@import "./style/_simplebar";
 @import "./style/_fonts";
 @import "./style/_var";
 @import "./style/_style";
@@ -11,3 +12,5 @@
 @import "./style/_contacts";
 @import "./style/_questions";
 @import "./style/_footer";
+@import "./style/_prod-modal";
+@import "./style/_basket-modal";

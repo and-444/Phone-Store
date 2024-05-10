@@ -1,0 +1,136 @@
+[
+    {
+        "id":1,
+        "title":"iPhone 15 Pro",
+        "price":90000,
+        "mainImage":"./data/images/1/1.jpeg",
+        "gallery":[
+            "./data/images/1/1.jpeg",
+            "./data/images/2/2.jpg",
+            "./data/images/3/3.jpg"
+        ],
+        "memory": [
+            128,
+            256,
+            512,
+            1024
+        ],
+        "chars":{
+            "screen":"6.1' (2556x1179) OLED 120 Гц",
+            "cameras":"3 камеры, основная 48 МП",
+            "processor":"Apple A17 Pro",
+            "communication":"3G, 4G LTE, 5G",
+            "charging":"USB-C"
+        }
+    },
+    {
+        "id":2,
+        "title":"iPhone 15 Pro",
+        "price":85000,
+        "mainImage":"./data/images/2/2.jpg",
+        "gallery":[
+            "./data/images/2/2.jpg",
+            "./data/images/2/2.jpg",
+            "./data/images/2/2.jpg"
+        ],
+        "memory": [
+            64,
+            128,
+            256,
+            512,
+            1024
+        ],
+        "chars":{
+            "screen":"6.1' (2556x1179) OLED 120 Гц",
+            "cameras":"3 камеры, основная 48 МП",
+            "processor":"Apple A17 Pro",
+            "communication-standard":"3G, 4G LTE, 5G",
+            "charging-connector":"USB-C"
+        }
+    },
+    {
+        "id":3,
+        "title":"iPhone 15 Pro",
+        "price":90000,
+        "mainImage":"./data/images/3/3.jpg",
+        "gallery":[
+            "./data/images/2/2.jpg",
+            "./data/images/2/2.jpg",
+            "./data/images/2/2.jpg"
+        ],
+        "memory": [
+            64,
+            128,
+            256,
+            512,
+            1024
+        ],
+        "chars":{
+            "screen":"6.1' (2556x1179) OLED 120 Гц",
+            "cameras":"3 камеры, основная 48 МП",
+            "processor":"Apple A17 Pro",
+            "communication":"3G, 4G LTE, 5G",
+            "charging":"USB-C"
+        }
+    },
+    {
+        "id":4,
+        "title":"iPhone 15 Pro",
+        "price":90000,
+        "mainImage":"./data/images/1/1.jpeg",
+        "memory": [
+            64,
+            128,
+            256,
+            512,
+            1024
+        ],
+        "chars":{
+            "screen":"6.1' (2556x1179) OLED 120 Гц",
+            "cameras":"3 камеры, основная 48 МП",
+            "processor":"Apple A17 Pro",
+            "communication-standard":"3G, 4G LTE, 5G",
+            "charging-connector":"USB-C"
+        }
+    },
+    {
+        "id":5,
+        "title":"iPhone 15 Pro",
+        "price":90000,
+        "mainImage":"./data/images/1/1.jpeg",
+        "memory": [
+            64,
+            128,
+            256,
+            512,
+            1024
+        ],
+        "chars":{
+            "screen":"6.1' (2556x1179) OLED 120 Гц",
+            "cameras":"3 камеры, основная 48 МП",
+            "processor":"Apple A17 Pro",
+            "communication-standard":"3G, 4G LTE, 5G",
+            "charging-connector":"USB-C"
+        }
+    },
+    {
+        "id":6,
+        "title":"iPhone 15 Pro",
+        "price":90000,
+        "mainImage":"./data/images/1/1.jpeg",
+        "memory": [
+            64,
+            128,
+            256,
+            512,
+            1024
+        ],
+        "chars":{
+            "screen":"6.1' (2556x1179) OLED 120 Гц",
+            "cameras":"3 камеры, основная 48 МП",
+            "processor":"Apple A17 Pro",
+            "communication-standard":"3G, 4G LTE, 5G",
+            "charging-connector":"USB-C"
+        }
+    }
+]

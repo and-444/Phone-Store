@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./libs/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Phone Store</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <header class="header">
+          <div class="header__container">
+            <div class="header__logo">
+              <a href="#" class="header__logo-link">
+                <img
+                  src="./img/logo/logo.svg"
+                  alt="Логотип"
+                  class="header__logo-img"
+                />
+              </a>
+            </div>
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#catalog">Каталог</a></li>
+                <li class="header__nav-item"><a href="#about-us">О нас</a></li>
+                <li class="header__nav-item">
+                  <a href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__items">
+              <div class="header__search">
+                <a class="header__search-link" href="#">
+                  <img
+                    src="./img/search/search.svg"
+                    alt="Поиск"
+                    class="header__search-img"
+                  />
+                </a>
+              </div>
+              <div class="header__basket cart">
+                <img
+                  src="./img/basket/basket.svg"
+                  alt="Корзина"
+                  class="header__basket-img"
+                />
+                <span class="header__basket-count">0</span>
+                <div class="mini-cart">
+                  <div class="mini-cart__top" data-simplebar>
+                    <ul class="mini-cart__list">
+                      <li class="mini-cart__item">
+                        <article class="mini-cart__product mini-product">
+                          <div class="mini-product__image">
+                            <img
+                              class="mini-product__img"
+                              src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                              alt="Телефон"
+                            />
+                          </div>
+                          <div class="mini-product__content">
+                            <div class="mini-product__text">
+                              <h3 class="mini-product__title">iPhone 15 Pro</h3>
+                              <sapn class="mini-product__price">90 000руб</sapn>
+                            </div>
+                            <button
+                              class="mini-product__delete"
+                              aria-label="Удалить товар"
+                            >
+                              <img
+                                class="mini-product__delete__trash"
+                                src="./img/basket/trash.svg"
+                                alt="удалить товар"
+                              />
+                            </button>
+                          </div>
+                        </article>
+                        <article class="mini-cart__product mini-product">
+                          <div class="mini-product__image">
+                            <img
+                              class="mini-product__img"
+                              src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                              alt="Телефон"
+                            />
+                          </div>
+                          <div class="mini-product__content">
+                            <div class="mini-product__text">
+                              <h3 class="mini-product__title">iPhone 15 Pro</h3>
+                              <sapn class="mini-product__price">90 000руб</sapn>
+                            </div>
+                            <button
+                              class="mini-product__delete"
+                              aria-label="Удалить товар"
+                            >
+                              <img
+                                class="mini-product__delete__trash"
+                                src="./img/basket/trash.svg"
+                                alt="удалить товар"
+                              />
+                            </button>
+                          </div>
+                        </article>
+                        <article class="mini-cart__product mini-product">
+                          <div class="mini-product__image">
+                            <img
+                              class="mini-product__img"
+                              src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                              alt="Телефон"
+                            />
+                          </div>
+                          <div class="mini-product__content">
+                            <div class="mini-product__text">
+                              <h3 class="mini-product__title">iPhone 15 Pro</h3>
+                              <sapn class="mini-product__price">90 000руб</sapn>
+                            </div>
+                            <button
+                              class="mini-product__delete"
+                              aria-label="Удалить товар"
+                            >
+                              <img
+                                class="mini-product__delete__trash"
+                                src="./img/basket/trash.svg"
+                                alt="удалить товар"
+                              />
+                            </button>
+                          </div>
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mini-cart__bottom">
+                    <div class="mini-cart__itog">
+                      <span class="mini-cart__txt">Итого:</span>
+                      <span class="mini-cart__summ">90 000руб</span>
+                    </div>
+                    <button class="mini-cart__btn">Оформить заказ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="content__container">
+            <section class="banner">
+              <div class="content__banner">
+                <div class="content__banner-info">
+                  <div class="content__banner-info-greeting">
+                    Добро пожаловать в PhoneStore
+                  </div>
+                  <div class="content__banner-info-title">
+                    Для каждого<br />
+                    найдётся <span>смартфон</span>
+                  </div>
+                  <div class="content__banner-info-text">
+                    Мы являемся интернет-магазином смартфонов, предлагающим
+                    широкий ассортимент товаров по привлекательной цене
+                  </div>
+                  <div class="content__banner-info-btn">
+                    <a href="#catalog">
+                      <button class="content__banner-info-button">
+                        За покупками
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#" class="content__banner-link">
+                        <img
+                          class="content__banner-link-img active"
+                          src="./img/slider/iphone15-pro-white-titanium.jpeg"
+                          alt="iPhone-15-pro"
+                        />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="content__banner-link">
+                        <img
+                          class="content__banner-link-img active"
+                          src="./img/slider/samsung-galaxy-s23-8-128gb.jpg"
+                          alt="iPhone-12"
+                        />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="content__banner-link">
+                        <img
+                          class="content__banner-link-img active"
+                          src="./img/slider/xiaomi-redmi-note12-pro-8-256gb.jpg"
+                          alt="iPhone-12"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </section>
+            <section class="catalog" id="catalog">
+              <div class="catalog__wrapper">
+                <div class="catalog__filter">
+                  <div class="catalog__filter-title">Категории</div>
+                  <div class="catalog__filter-categories">
+                    <div class="catalog__filter-categories-item">iPhone</div>
+                    <div class="catalog__filter-categories-item">Samsung</div>
+                    <div class="catalog__filter-categories-item">Xiaomi</div>
+                  </div>
+                  <div class="catalog__filter-prop">
+                    <div class="catalog__filter-title">Цена, руб</div>
+                    <div class="catalog__filter-price">
+                      <div class="catalog__filter-wrapper">
+                        <input
+                          type="text"
+                          class="catalog__filter-input"
+                          id="input-0"
+                        />
+                        <input
+                          type="text"
+                          class="catalog__filter-input"
+                          id="input-1"
+                        />
+                      </div>
+                      <div
+                        class="catalog__filter-element"
+                        id="range-slider"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="catalog__filter-title">Память, Гб</div>
+                  <div class="catalog__filter-memory">
+                    <div class="catalog__filter-memory-item">64 Гб</div>
+                    <div class="catalog__filter-memory-item">128 Гб</div>
+                    <div class="catalog__filter-memory-item">256 Гб</div>
+                    <div class="catalog__filter-memory-item">512 Гб</div>
+                    <div class="catalog__filter-memory-item">1024 Гб</div>
+                  </div>
+                  <div class="catalog__filter-title">Цвета</div>
+                  <div class="catalog__filter-color">
+                    <div class="catalog__filter-color-item">
+                      <span class="red"></span>
+                    </div>
+                    <div class="catalog__filter-color-item">
+                      <span class="black"></span>
+                    </div>
+                    <div class="catalog__filter-color-item">
+                      <span class="blue"></span>
+                    </div>
+                  </div>
+                  <div class="catalog__filter-button">
+                    <button class="catalog__filter-button-apply">
+                      Применить
+                    </button>
+                  </div>
+                  <div class="catalog__filter-button-reset">Сбросить</div>
+                </div>
+                <div class="catalog__items-catalog">
+                  <div class="catalog__items">
+                    <div class="catalog__items-item">
+                      <div class="catalog__items-item-img">
+                        <img
+                          src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                          alt="iPhone-15-pro"
+                          class="catalog__items-item-photo"
+                        />
+                        <div class="catalog__items-item-btns">
+                          <button
+                            class="catalog__items-item-btn"
+                            aria-label="Показать информацию о товаре"
+                          >
+                            <img
+                              class="eye"
+                              src="./img/catalog/frame.svg"
+                              alt="1"
+                            />
+                          </button>
+                          <button
+                            class="catalog__items-item-btn"
+                            aria-label="Добавить товар в корзину"
+                          >
+                            <img
+                              class="basket"
+                              src="./img/catalog/basket.svg"
+                              alt="2"
+                            />
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="catalog__items-item-info">iPhone 15 Pro</div>
+                      <div class="catalog__items-item-price">90 000руб.</div>
+                    </div>
+                  </div>
+                  <div class="catalog__btn">
+                    <button class="catalog__button">Показать еще</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="about-us" id="about-us">
+              <div class="about-us__wrapper">
+                <div class="about-us__about">
+                  <h2 class="about-us__title">Пара слов о нас</h2>
+                  <div class="about-us__text">
+                    Мы с большой радостью делаем самую современную технику
+                    доступной.<br />
+                    Стараемся, чтобы использование гаджетов приносило вам
+                    большую пользу<br />
+                    и дарило неизгладимые впечатления длиною в Жизнь.
+                  </div>
+                </div>
+
+                <div class="about-us__img">
+                  <a href="#catalog" class="about-us__img-link">
+                    <img src="./img/phones/more-iphones.png" alt="Телефоны" />
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section class="contacts" id="contacts">
+              <div class="contacts__wrapper">
+                <div class="contacts__info">
+                  <h2 class="contacts__title">Контакты</h2>
+                  <div class="contacts__main-ofice">
+                    <div class="contacts__main-ofice-main">Главный офис</div>
+                    <div class="contacts__main-ofice-number">
+                      +7 960 320 29 29
+                    </div>
+                    <div class="contacts__main-ofice-address">
+                      г. Пенза, Володарского 6
+                    </div>
+                  </div>
+                  <div class="contacts__sales-department">
+                    <div class="contacts__main-ofice-main">Офис продаж</div>
+                    <div class="contacts__main-ofice-number">
+                      +7 960 320 29 29
+                    </div>
+                    <div class="contacts__main-ofice-address">
+                      г. Пенза, Володарского 6
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__map">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A71780d0b109ea54891243ee2991f360705bbb4b5d1bf2c77c331469b081aef2d&amp;source=constructor"
+                    width="500"
+                    height="400"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+              </div>
+            </section>
+            <section class="questions">
+              <div class="questions__wrapper">
+                <div class="questions__questions">
+                  <h2 class="questions__title">Есть вопросы?</h2>
+                  <div class="questions__text">
+                    Заполните форму и наш<br />
+                    менеджер свяжется с вами
+                  </div>
+                  <form
+                    action="https://api.web3forms.com/submit"
+                    method="POST"
+                    id="form"
+                    class="questions__form"
+                    autocomplete="off"
+                  >
+                    <input
+                      type="hidden"
+                      name="access_key"
+                      value="754c2605-e08e-4afa-8a09-d77f27c0c065"
+                    />
+                    <div class="question__form-box">
+                      <input
+                        type="text"
+                        required
+                        id="name"
+                        name="Имя"
+                        placeholder="Ваше имя"
+                        class="questions__form-input"
+                      />
+                    </div>
+                    <div class="question__form-box">
+                      <input
+                        type="tel"
+                        required
+                        id="tel"
+                        name="Телефон"
+                        placeholder="+7(___) ___-__-__"
+                        class="questions__form-input"
+                      />
+                    </div>
+                    <div class="question__form-box">
+                      <textarea
+                        class="questions__form-area"
+                        required
+                        placeholder="Напишите ваш вопрос сюда ..."
+                        name="Сообщение"
+                        id="msg"
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="questions__form-btn">
+                      Отправить
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer__container">
+            <div class="footer__wrapper">
+              <div class="footer__logo">
+                <a href="#" class="footer__logo-link">
+                  <img
+                    src="./img/logo/logo.svg"
+                    class="footer__logo-img"
+                    alt="Логотп"
+                  />
+                </a>
+              </div>
+              <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="#catalog">Каталог</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#about-us">О нас</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <div class="graph-modal">
+      <div
+        class="graph-modal__container prod-modal"
+        role="dialog"
+        aria-modal="true"
+        data-graph-target="prod-modal"
+      >
+        <button
+          class="btn-reset graph-modal__close js-modal-close"
+          aria-label="Закрыть модальное окно"
+        ></button>
+        <div class="graph-modal__content">
+          <div class="prod-modal__top">
+            <div class="modal-slider">
+              <div class="modal-slider__container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      class="modal-slider__img"
+                      src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                      alt="1"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="modal-slider__img"
+                      src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                      alt="1"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="modal-slider__img"
+                      src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                      alt="1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-info">
+              <div class="modal-info__wrapper">
+                <h3 class="modal-info__title">iPhone 15 Pro</h3>
+                <div class="modal-info__memory">
+                  <span class="modal-info__subtitle">HDD</span>
+                  <ul class="modal-info__memory-list modal-memory">
+                    <li class="modal-memory__item">
+                      <button class="modal-memory__btn">128Gb</button>
+                    </li>
+                    <li class="modal-memory__item">
+                      <button class="modal-memory__btn">256Gb</button>
+                    </li>
+                    <li class="modal-memory__item">
+                      <button class="modal-memory__btn">512Gb</button>
+                    </li>
+                    <li class="modal-memory__item">
+                      <button class="modal-memory__btn">1Tb</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-info__price">
+                  <span class="modal-info__current-price">90 000руб</span>
+                </div>
+              </div>
+              <button class="modal-info__order">Купить</button>
+              <ul class="modal-info__note modal-note">
+                <li class="modal-note__item">* в наличии</li>
+                <li class="modal-note__item">
+                  * цена указана со скидкой за наличный расчет
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="prod-modal__bottom prod-bottom">
+            <div class="prod-bottom__column">
+              <h3 class="prod-bottom__title">Характеристики</h3>
+              <div class="prod-chars">
+                <div class="prod-bottom__descer prod-chars__item">
+                  <div class="prod-chars__item-title">Экран</div>
+                  <div class="prod-chars__item-params">
+                    6.1" (2556x1179) OLED 120 Гц
+                  </div>
+                </div>
+                <div class="prod-bottom__descer prod-chars__item">
+                  <div class="prod-chars__item-title">Камеры</div>
+                  <div class="prod-chars__item-params">
+                    3 камеры, основная 48 МП
+                  </div>
+                </div>
+                <div class="prod-bottom__descer prod-chars__item">
+                  <div class="prod-chars__item-title">Процессор</div>
+                  <div class="prod-chars__item-params">Apple A17 Pro</div>
+                </div>
+                <div class="prod-bottom__descer prod-chars__item">
+                  <div class="prod-chars__item-title">Стандарт связи</div>
+                  <div class="prod-chars__item-params">3G, 4G LTE, 5G</div>
+                </div>
+                <div class="prod-bottom__descer prod-chars__item">
+                  <div class="prod-chars__item-title">
+                    Тип разъема для зарядки
+                  </div>
+                  <div class="prod-chars__item-params">USB-C</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./modules/swiper-bundle.min.js"></script>
+    <script src="./modules/nouislider.min.js"></script>
+    <script src="./modules/graph-modal.min.js"></script>
+    <script src="./modules/simplebar.min.js"></script>
+    <script src="./js/range-slider.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/cart.js"></script>
+    <!-- <script src="./modules/just-validate.min.js"></script>
+    <script src="./modules/inputmask.min.js"></script>
+    <script src="./js/mail.js"></script> -->
+  </body>
+</html>

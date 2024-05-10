@@ -1,0 +1,147 @@
+.cart {
+    position: relative;
+}
+
+.mini-cart {
+    z-index: 100;
+    position: absolute;
+    right: -15px;
+    top: calc(100% + 32px);
+    width: 505px;
+    box-shadow: 0 -4px 10px rgba(0, 13, 84, 0.1);
+    background-color: $background;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s linear;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__top {
+        max-height: 323px;
+
+        .simplebar-track.simplebar-vertical {
+            right: 5px;
+            top: 20px;
+            bottom: 20px;
+            border-radius: 5px;
+            width: 4px;
+            background-color: rgb(77, 77, 77, 0.1);
+        }
+
+        .simplebar-scrollbar::before {
+            left: 0;
+            right: auto;
+            border-radius: 5px;
+            width: 4px;
+            background-color: rgba(77, 77, 77, 0.2);
+            opacity: 1;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: $background;
+        box-shadow: 0 -4px 10px rgba(0, 13, 84, 0.1);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    &__txt {
+        display: block;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    &__summ {
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-2;
+    }
+
+    &__btn {
+        background-color: $color-2;
+        color: $background;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        font-size: 16px;
+        padding: 10px 30px;
+        cursor: pointer;
+    }
+}
+
+.mini-product {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+
+    &__image {
+        flex-shrink: 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: $background-3;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        margin-right: auto;
+        max-width: 268px;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        padding-bottom: 14px;
+    }
+
+    &__price {
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-2;
+    }
+
+    &__delete {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &__trash {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+    }
+}

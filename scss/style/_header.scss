@@ -93,6 +93,7 @@
     // .header__basket-img
 
     &__basket-img {
+        pointer-events: none;
     }
 
     // .header__basket-count
@@ -111,5 +112,6 @@
         color: #fff;
         border: 1px solid $color-2;
         background-color: $color-2;
+        pointer-events: none;
     }
 }

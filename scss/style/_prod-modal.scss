@@ -1,0 +1,143 @@
+.prod-modal {
+    border-radius: 10px;
+    padding: 40px;
+    width: 1100px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 50px;
+    }
+}
+
+.modal-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 20px / 2);
+    background-color: $background-3;
+    border-radius: 15px;
+    padding: 20px;
+
+    &__container {
+        overflow: hidden;
+        width: 51%;
+    }
+    &__img {
+        width: 460px;
+        object-fit: cover;
+        max-height: 100%;
+    }
+}
+
+.modal-info {
+    width: calc(50% - 20px / 2);
+
+    &__memory {
+        padding-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        color: $color-1;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    &__subtitle {
+        font-size: 15px;
+        font-weight: 500;
+        color: $color-1;
+    }
+
+    &__price {
+        padding-bottom: 20px;
+    }
+
+    &__current-price {
+        font-size: 22px;
+        font-weight: 700;
+        color: $color-2;
+        line-height: 16px;
+    }
+
+    &__order {
+        background-color: $color-2;
+        color: $background;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        cursor: pointer;
+    }
+}
+
+.modal-memory {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 20px 0 0 0;
+    margin: 0;
+
+    &__item {
+        list-style: none;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #eaeaea;
+        background-color: $background;
+        border-radius: 4px;
+        padding: 6px 27px;
+        max-width: 70px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-3;
+        cursor: pointer;
+    }
+}
+
+.modal-note {
+    padding: 20px 0 0 0;
+    margin: 0;
+
+    &__item {
+        list-style: none;
+        font-size: 14px;
+    }
+}
+
+.prod-bottom {
+    &__title {
+        margin: 0;
+        padding-bottom: 20px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 16px;
+        color: $color-1;
+    }
+}
+
+.prod-chars__item {
+    display: flex;
+
+    &-title {
+        font-size: 18px;
+        width: 300px;
+        border-bottom: 1px solid $color-3;
+        border-right: 1px solid $color-3;
+        padding: 10px;
+    }
+
+    &-params {
+        font-size: 18px;
+        width: 350px;
+        border-bottom: 1px solid $color-3;
+        padding: 10px;
+    }
+}
