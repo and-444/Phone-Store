@@ -1,14 +1,19 @@
 const cartBtn = document.querySelector(".cart");
 const miniCart = document.querySelector(".mini-cart");
 
-cartBtn.addEventListener("click", () => {
-  miniCart.classList.add("active");
+cartBtn.addEventListener("click", function (e) {
+  if (e.target === this) {
+    miniCart.classList.toggle("active");
+  }
 });
 
 document.addEventListener("click", (e) => {
-  const cart = e.target.closest(".mini-cart");
-  const del = e.target.classList.contains("mini-product__delete");
-  if (!e.target.classList.contains("cart") && !cart) {
+  const el = e.target;
+  if (
+    !el.closest(".cart") &&
+    !el.closest(".mini-cart") &&
+    !el.closest(".mini-product__delete")
+  ) {
     miniCart.classList.remove("active");
   }
 });

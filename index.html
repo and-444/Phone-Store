@@ -50,92 +50,16 @@
                 <span class="header__basket-count">0</span>
                 <div class="mini-cart">
                   <div class="mini-cart__top" data-simplebar>
-                    <ul class="mini-cart__list">
-                      <li class="mini-cart__item">
-                        <article class="mini-cart__product mini-product">
-                          <div class="mini-product__image">
-                            <img
-                              class="mini-product__img"
-                              src="./img/phones/iphone15-pro-white-titanium.jpeg"
-                              alt="Телефон"
-                            />
-                          </div>
-                          <div class="mini-product__content">
-                            <div class="mini-product__text">
-                              <h3 class="mini-product__title">iPhone 15 Pro</h3>
-                              <sapn class="mini-product__price">90 000руб</sapn>
-                            </div>
-                            <button
-                              class="mini-product__delete"
-                              aria-label="Удалить товар"
-                            >
-                              <img
-                                class="mini-product__delete__trash"
-                                src="./img/basket/trash.svg"
-                                alt="удалить товар"
-                              />
-                            </button>
-                          </div>
-                        </article>
-                        <article class="mini-cart__product mini-product">
-                          <div class="mini-product__image">
-                            <img
-                              class="mini-product__img"
-                              src="./img/phones/iphone15-pro-white-titanium.jpeg"
-                              alt="Телефон"
-                            />
-                          </div>
-                          <div class="mini-product__content">
-                            <div class="mini-product__text">
-                              <h3 class="mini-product__title">iPhone 15 Pro</h3>
-                              <sapn class="mini-product__price">90 000руб</sapn>
-                            </div>
-                            <button
-                              class="mini-product__delete"
-                              aria-label="Удалить товар"
-                            >
-                              <img
-                                class="mini-product__delete__trash"
-                                src="./img/basket/trash.svg"
-                                alt="удалить товар"
-                              />
-                            </button>
-                          </div>
-                        </article>
-                        <article class="mini-cart__product mini-product">
-                          <div class="mini-product__image">
-                            <img
-                              class="mini-product__img"
-                              src="./img/phones/iphone15-pro-white-titanium.jpeg"
-                              alt="Телефон"
-                            />
-                          </div>
-                          <div class="mini-product__content">
-                            <div class="mini-product__text">
-                              <h3 class="mini-product__title">iPhone 15 Pro</h3>
-                              <sapn class="mini-product__price">90 000руб</sapn>
-                            </div>
-                            <button
-                              class="mini-product__delete"
-                              aria-label="Удалить товар"
-                            >
-                              <img
-                                class="mini-product__delete__trash"
-                                src="./img/basket/trash.svg"
-                                alt="удалить товар"
-                              />
-                            </button>
-                          </div>
-                        </article>
-                      </li>
-                    </ul>
+                    <ul class="mini-cart__list"></ul>
                   </div>
                   <div class="mini-cart__bottom">
                     <div class="mini-cart__itog">
                       <span class="mini-cart__txt">Итого:</span>
-                      <span class="mini-cart__summ">90 000руб</span>
+                      <span class="mini-cart__summ">0 руб</span>
                     </div>
-                    <button class="mini-cart__btn">Оформить заказ</button>
+                    <button class="mini-cart__btn" data-graph-path="cart-modal">
+                      Перейти в корзину
+                    </button>
                   </div>
                 </div>
               </div>
@@ -548,6 +472,91 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        class="graph-modal__container cart-modal"
+        role="dialog"
+        aria-modal="true"
+        data-graph-target="cart-modal"
+      >
+        <button
+          class="btn-reset graph-modal__close js-modal-close"
+          aria-label="Закрыть модальное окно"
+        ></button>
+        <div class="graph-modal__content">
+          <div class="cart-modal__top">
+            <h2 class="cart-modal__title">Оформление заказ</h2>
+          </div>
+          <div class="cart-modal-order">
+            <div class="cart-modal-order__top">
+              <div class="span cart-modal-order__quantity">
+                Товаров в заказе: <span>0 шт.</span>
+              </div>
+              <div class="span cart-modal-order__summ">
+                Общая сумма заказа: <span>0 руб</span>
+              </div>
+            </div>
+            <div class="cart-modal-order__content">
+              <button class="cart-modal-order__show">
+                Состав заказа
+                <img
+                  class="cart-modal-order__icon"
+                  src="./img/basket/angle.svg"
+                  alt="/\"
+                />
+              </button>
+              <ul class="cart-modal-order__list">
+                <li class="cart-modal-order__item">
+                  <article class="cart-modal-order__product cart-modal-product">
+                    <div class="cart-modal-product__image">
+                      <img
+                        class="cart-modal-product__img"
+                        src="./img/phones/iphone15-pro-white-titanium.jpeg"
+                        alt="Телефон"
+                      />
+                    </div>
+                    <div class="cart-modal-product__content">
+                      <div class="cart-modal-product__text">
+                        <h3 class="cart-modal-product__title">iPhone 15 Pro</h3>
+                        <sapn class="cart-modal-product__price">90 000руб</sapn>
+                      </div>
+                      <button
+                        class="cart-modal-product__delete"
+                        aria-label="Удалить товар"
+                      >
+                        Удалить
+                      </button>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <form class="cart-modal__form">
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Ваше имя"
+              class="cart-modal__input"
+            />
+            <input
+              type="text"
+              name="tel"
+              required
+              placeholder="+7(___) ___-__-__"
+              class="cart-modal__input"
+            />
+            <input
+              type="text"
+              name="email"
+              required
+              placeholder="E-mail"
+              class="cart-modal__input"
+            />
+            <button class="cart-modal__btn">Оформить заказ</button>
+          </form>
         </div>
       </div>
     </div>
