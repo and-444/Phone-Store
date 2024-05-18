@@ -41,7 +41,7 @@
                   />
                 </a>
               </div>
-              <div class="header__basket cart">
+              <div class="header__basket cart inactive">
                 <img
                   src="./img/basket/basket.svg"
                   alt="Корзина"
@@ -58,7 +58,7 @@
                       <span class="mini-cart__summ">0 руб</span>
                     </div>
                     <button class="mini-cart__btn" data-graph-path="cart-modal">
-                      Перейти в корзину
+                      Перейти к оформлению
                     </button>
                   </div>
                 </div>
@@ -285,7 +285,7 @@
                     Заполните форму и наш<br />
                     менеджер свяжется с вами
                   </div>
-                  <form
+                  <!-- <form
                     action="https://api.web3forms.com/submit"
                     method="POST"
                     id="form"
@@ -329,6 +329,30 @@
                     <button type="submit" class="questions__form-btn">
                       Отправить
                     </button>
+                  </form> -->
+                  <form action="#" class="questions__form">
+                    <input
+                      data-validate-field="name"
+                      name="name"
+                      type="text"
+                      placeholder="Ваше имя"
+                      class="questions__form-input"
+                    />
+                    <input
+                      data-validate-field="phone"
+                      name="tel"
+                      type="tel"
+                      placeholder="+7 (___) ___-____"
+                      class="questions__form-input"
+                    />
+
+                    <textarea
+                      data-validate-field="message"
+                      name="message"
+                      class="questions__form-area"
+                      placeholder="Напишите ваш вопрос сюда ..."
+                    ></textarea>
+                    <button class="questions__form-btn">Отправить</button>
                   </form>
                 </div>
               </div>
@@ -506,52 +530,27 @@
                   alt="/\"
                 />
               </button>
-              <ul class="cart-modal-order__list">
-                <li class="cart-modal-order__item">
-                  <article class="cart-modal-order__product cart-modal-product">
-                    <div class="cart-modal-product__image">
-                      <img
-                        class="cart-modal-product__img"
-                        src="./img/phones/iphone15-pro-white-titanium.jpeg"
-                        alt="Телефон"
-                      />
-                    </div>
-                    <div class="cart-modal-product__content">
-                      <div class="cart-modal-product__text">
-                        <h3 class="cart-modal-product__title">iPhone 15 Pro</h3>
-                        <sapn class="cart-modal-product__price">90 000руб</sapn>
-                      </div>
-                      <button
-                        class="cart-modal-product__delete"
-                        aria-label="Удалить товар"
-                      >
-                        Удалить
-                      </button>
-                    </div>
-                  </article>
-                </li>
-              </ul>
+              <ul class="cart-modal-order__list"></ul>
             </div>
           </div>
           <form class="cart-modal__form">
             <input
-              type="text"
+              data-validate-field="name"
               name="name"
-              required
+              type="text"
               placeholder="Ваше имя"
               class="cart-modal__input"
             />
             <input
-              type="text"
+              data-validate-field="phone"
               name="tel"
-              required
+              type="tel"
               placeholder="+7(___) ___-__-__"
               class="cart-modal__input"
             />
             <input
-              type="text"
+              data-validate-field="email"
               name="email"
-              required
               placeholder="E-mail"
               class="cart-modal__input"
             />
@@ -565,11 +564,11 @@
     <script src="./modules/nouislider.min.js"></script>
     <script src="./modules/graph-modal.min.js"></script>
     <script src="./modules/simplebar.min.js"></script>
+    <script src="./modules/inputmask.min.js"></script>
+    <script src="./modules/just-validate.min.js"></script>
     <script src="./js/range-slider.js"></script>
     <script src="./js/products.js"></script>
     <script src="./js/cart.js"></script>
-    <!-- <script src="./modules/just-validate.min.js"></script>
-    <script src="./modules/inputmask.min.js"></script>
-    <script src="./js/mail.js"></script> -->
+    <script src="./js/validate.js"></script>
   </body>
 </html>

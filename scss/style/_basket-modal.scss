@@ -26,6 +26,10 @@
         padding: 0;
     }
 
+    &__item {
+        list-style: none;
+    }
+
     &__top {
         max-height: 323px;
 
@@ -135,6 +139,7 @@
         margin: 0;
         width: 20px;
         height: 20px;
+        font-size: 0;
         cursor: pointer;
 
         &__trash {

@@ -248,7 +248,7 @@ const loadCartData = (id = 1) => {
                             <button
                               class="mini-product__delete"
                               aria-label="Удалить товар"
-                            >
+                            >Удалить
                               <img
                                 class="mini-product__delete__trash"
                                 src="./img/basket/trash.svg"
@@ -270,7 +270,9 @@ const loadCartData = (id = 1) => {
       plusFullPrice(item.price);
       printFullPrice();
 
-      let num = document.querySelectorAll(".mini-cart__item").length;
+      let num = document.querySelectorAll(
+        ".mini-cart__list .mini-cart__item"
+      ).length;
 
       if (num > 0) {
         cartCount.classList.add("disabled");
@@ -287,6 +289,8 @@ const cartLogic = () => {
     el.addEventListener("click", (e) => {
       const id = e.currentTarget.dataset.id;
       loadCartData(id);
+
+      document.querySelector(".header__basket").classList.remove("inactive");
 
       e.currentTarget.classList.add("disabled");
     });
@@ -312,14 +316,84 @@ const cartLogic = () => {
       minusFullPrice(price);
       printFullPrice();
 
-      let num = document.querySelectorAll(".mini-cart__item").length;
+      let num = document.querySelectorAll(
+        ".mini-cart__list .mini-cart__item"
+      ).length;
 
       if (num == 0) {
         cartCount.classList.remove("disabled");
         miniCart.classList.remove("active");
+        document.querySelector(".header__basket").classList.add("inactive");
       }
 
       printQuantity(num);
     }
   });
 };
+
+const openOrderModal = document.querySelector(".mini-cart__btn");
+const orderModalList = document.querySelector(".cart-modal-order__list");
+const orderModalQuantity = document.querySelector(
+  ".cart-modal-order__quantity span"
+);
+const orderModalSumm = document.querySelector(".cart-modal-order__summ span");
+const orderModalShow = document.querySelector(".cart-modal-order__show");
+
+openOrderModal.addEventListener("click", () => {
+  const productsHTML = document.querySelector(".mini-cart__list").innerHTML;
+  orderModalList.innerHTML = productsHTML;
+
+  orderModalQuantity.textContent = `${
+    document.querySelectorAll(".mini-cart__list .mini-cart__item").length
+  } шт`;
+
+  orderModalSumm.textContent = fullPrice.textContent;
+});
+
+orderModalShow.addEventListener("click", () => {
+  if (orderModalList.classList.contains("active")) {
+    orderModalList.classList.remove("active");
+    orderModalShow.classList.remove("active");
+  } else {
+    orderModalList.classList.add("active");
+    orderModalShow.classList.add("active");
+  }
+});
+
+orderModalList.addEventListener("click", (e) => {
+  if (e.target.classList.contains("mini-product__delete")) {
+    const self = e.target;
+    const parent = self.closest(".mini-cart__item");
+    const price = parseInt(
+      priceWithoutSpaces(
+        parent.querySelector(".mini-product__price").textContent
+      )
+    );
+    const id = parent.dataset.id;
+
+    document
+      .querySelector(`.add-to-cart-btn[data-id="${id}"]`)
+      .classList.remove("disabled");
+
+    parent.style.display = "none";
+    parent.remove();
+    document.querySelector(`.mini-cart__item[data-id="${id}"]`).remove();
+
+    minusFullPrice(price);
+    printFullPrice();
+
+    let num = document.querySelectorAll(
+      ".mini-cart__list .mini-cart__item"
+    ).length;
+
+    if (num == 0) {
+      cartCount.classList.remove("disabled");
+      miniCart.classList.remove("active");
+      document.querySelector(".header__basket").classList.add("inactive");
+
+      modal.close();
+    }
+
+    printQuantity(num);
+  }
+});

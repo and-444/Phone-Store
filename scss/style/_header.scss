@@ -72,6 +72,7 @@
     // .header__search
 
     &__search {
+        display: none;
     }
 
     // .header__search-link
@@ -89,6 +90,10 @@
     &__basket {
         position: relative;
         cursor: pointer;
+
+        &.inactive {
+            pointer-events: none;
+        }
     }
     // .header__basket-img
 
