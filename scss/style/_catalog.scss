@@ -46,6 +46,10 @@
         &:hover {
             color: $color-2;
         }
+
+        &.active {
+            color: $color-2;
+        }
     }
 
     // .catalog__filter-prop
@@ -168,14 +172,15 @@
         &:hover {
             color: $color-2;
         }
+        &.active {
+            color: $color-2;
+        }
     }
 
     // .catalog__filter-color
 
     &__filter-color {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 
     // .catalog__filter-color-item
@@ -183,42 +188,90 @@
     &__filter-color-item {
         cursor: pointer;
         transition: all 0.3s linear;
-        padding-left: 30px;
+        padding-left: 15px;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        transition: all 0.2s linear;
         & span.red {
-            border: 1px solid transparent;
+            border: 2px solid transparent;
             width: 15px;
             height: 15px;
             background-color: red;
             border-radius: 50%;
             transition: all 0.2s linear;
             &:hover {
-                border: 1px solid $color-2;
+                border: 2px solid $color-2;
             }
         }
         & span.black {
-            border: 1px solid transparent;
+            border: 2px solid transparent;
             width: 15px;
             height: 15px;
             background-color: black;
             border-radius: 50%;
             transition: all 0.2s linear;
             &:hover {
-                border: 1px solid $color-2;
+                border: 2px solid $color-2;
             }
         }
         & span.blue {
-            border: 1px solid transparent;
+            border: 2px solid transparent;
             width: 15px;
             height: 15px;
-            background-color: #afffff;
+            background-color: #c0cfde;
             border-radius: 50%;
             transition: all 0.2s linear;
             &:hover {
-                border: 1px solid $color-2;
+                border: 2px solid $color-2;
             }
+        }
+        & span.white {
+            border: 2px solid transparent;
+            width: 15px;
+            height: 15px;
+            background-color: #f5f4ef;
+            border-radius: 50%;
+            transition: all 0.2s linear;
+            &:hover {
+                border: 2px solid $color-2;
+            }
+        }
+        & span.green {
+            border: 2px solid transparent;
+            width: 15px;
+            height: 15px;
+            background-color: #7b8079;
+            border-radius: 50%;
+            transition: all 0.2s linear;
+            &:hover {
+                border: 2px solid $color-2;
+            }
+        }
+        & span.gray {
+            border: 2px solid transparent;
+            width: 15px;
+            height: 15px;
+            background-color: #9d968e;
+            border-radius: 50%;
+            transition: all 0.2s linear;
+            &:hover {
+                border: 2px solid $color-2;
+            }
+        }
+        & span.lavender {
+            border: 2px solid transparent;
+            width: 15px;
+            height: 15px;
+            background-color: #f9ebfa;
+            border-radius: 50%;
+            transition: all 0.2s linear;
+            &:hover {
+                border: 2px solid $color-2;
+            }
+        }
+        & span.active {
+            border: 2px solid $color-2;
         }
     }
 
@@ -240,6 +293,13 @@
         width: 145px;
         height: 50px;
         cursor: pointer;
+        transition: all 0.3s linear;
+        &:hover {
+            background-color: rgb(70, 163, 88, 0.9);
+        }
+        &:active {
+            background-color: rgb(70, 163, 88, 0.8);
+        }
     }
 
     // .catalog__filter-button-reset
@@ -393,5 +453,70 @@
         width: 145px;
         height: 50px;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 1200px) {
+    .catalog__filter {
+        margin-left: 20px;
+    }
+
+    .catalog__items {
+        gap: 20px;
+    }
+
+    .catalog__items-item-photo {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .catalog__items-item {
+        flex: 0 1 28.33333%;
+    }
+
+    .catalog__items-item-photo {
+        width: 200px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 960px) {
+    .catalog__wrapper {
+        gap: 0;
+    }
+    .catalog__items {
+        gap: 40px;
+        justify-content: center;
+    }
+    .catalog__items-item-photo {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 830px) {
+    .catalog__items-item-photo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 670px) {
+    .catalog__wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .catalog__filter {
+        min-width: 220px;
+        margin-left: 0;
+        order: 2;
+    }
+
+    .catalog__items-item-photo {
+        width: 230px;
+        height: 230px;
     }
 }

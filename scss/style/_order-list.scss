@@ -1,0 +1,29 @@
+.order-list {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 640px;
+  width: 100%;
+  box-shadow: 0 -4px 10px rgba(0, 13, 84, 0.1);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: #444b58;
+    color: var(--text-color);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 500px;
+    gap: 20px;
+  }
+}

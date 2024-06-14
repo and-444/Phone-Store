@@ -49,3 +49,53 @@
         }
     }
 }
+
+@media (max-width: 840px) {
+    .about-us__wrapper {
+        gap: 25px;
+    }
+
+    .about-us__title {
+        font-size: 25px;
+    }
+
+    .about-us__text {
+        font-size: 15px;
+    }
+
+    .about-us__img-link img {
+        width: 200px;
+        height: 210px;
+    }
+}
+
+@media (max-width: 730px) {
+    .about-us__wrapper {
+        flex-direction: column;
+        padding: 25px 0;
+        align-items: center;
+    }
+
+    .about-us__title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 530px) {
+    .about-us__title {
+        margin: 0;
+        padding-bottom: 20px;
+    }
+
+    .about-us__text {
+        font-size: 15px;
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .about-us__img-link img {
+        width: 150px;
+        height: 150px;
+    }
+}

@@ -151,3 +151,25 @@
         }
     }
 }
+
+@media (max-width: 570px) {
+    .mini-cart {
+        width: 400px;
+    }
+}
+
+@media (max-width: 470px) {
+    .mini-cart {
+        width: 300px;
+    }
+
+    .mini-cart__itog {
+        padding-bottom: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .mini-cart__bottom {
+        flex-direction: column;
+    }
+}

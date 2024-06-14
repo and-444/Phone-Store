@@ -71,6 +71,13 @@
         text-transform: uppercase;
         padding: 10px 30px;
         cursor: pointer;
+        transition: all 0.3s linear;
+        &:hover {
+            background-color: rgb(70, 163, 88, 0.9);
+        }
+        &:active {
+            background-color: rgb(70, 163, 88, 0.8);
+        }
     }
 }
 
@@ -139,5 +146,114 @@
         width: 350px;
         border-bottom: 1px solid $color-3;
         padding: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .prod-modal {
+        width: 800px;
+    }
+}
+
+@media (max-width: 835px) {
+    .prod-modal {
+        width: 600px;
+    }
+
+    .modal-slider {
+        padding: 0;
+    }
+
+    .prod-modal__top {
+        padding-bottom: 25px;
+    }
+}
+
+@media (max-width: 620px) {
+    .prod-modal {
+        width: 400px;
+    }
+
+    .prod-modal__top {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .modal-slider {
+        width: 300px;
+    }
+
+    .modal-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .modal-info__title {
+        text-align: center;
+    }
+
+    .modal-info__memory {
+        text-align: center;
+    }
+
+    .modal-memory {
+        justify-content: center;
+    }
+
+    .modal-info__price {
+        text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .prod-modal {
+        width: 300px;
+    }
+
+    .prod-chars {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+
+    .prod-chars__item {
+        display: flex;
+    }
+}
+
+@media (max-width: 310px) {
+    .prod-modal {
+        padding: 10px;
+        width: 200px;
+    }
+
+    .modal-slider {
+        width: 200px;
+    }
+
+    .modal-info__title {
+        font-size: 18px;
+    }
+
+    .prod-bottom__title {
+        font-size: 18px;
+    }
+
+    .prod-chars__item {
+        flex-direction: column;
+    }
+
+    .prod-chars__item-title {
+        font-size: 14px;
+        border-bottom: 0;
+        border-right: 0;
+    }
+
+    .prod-chars__item-params {
+        font-size: 12px;
+        border-bottom: 0;
     }
 }

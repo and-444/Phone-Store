@@ -63,6 +63,21 @@
                   </div>
                 </div>
               </div>
+              <div class="header__login">
+                <a href="#" class="header__login-link">
+                  <img
+                    class="header__login-img"
+                    src="./img/login/login.png"
+                    alt="Логин"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="modal__content modal-private" data-active="false">
+              <div class="modal-private__inner">
+                <div class="modal-private__orders">Мои заказы</div>
+                <div class="modal-private__exit">Выйти из аккаунта</div>
+              </div>
             </div>
           </div>
         </header>
@@ -129,9 +144,21 @@
                 <div class="catalog__filter">
                   <div class="catalog__filter-title">Категории</div>
                   <div class="catalog__filter-categories">
-                    <div class="catalog__filter-categories-item">iPhone</div>
-                    <div class="catalog__filter-categories-item">Samsung</div>
-                    <div class="catalog__filter-categories-item">Xiaomi</div>
+                    <div>
+                      <span class="catalog__filter-categories-item"
+                        >iPhone</span
+                      >
+                    </div>
+                    <div>
+                      <span class="catalog__filter-categories-item"
+                        >Samsung</span
+                      >
+                    </div>
+                    <div>
+                      <span class="catalog__filter-categories-item"
+                        >Xiaomi</span
+                      >
+                    </div>
                   </div>
                   <div class="catalog__filter-prop">
                     <div class="catalog__filter-title">Цена, руб</div>
@@ -156,22 +183,44 @@
                   </div>
                   <div class="catalog__filter-title">Память, Гб</div>
                   <div class="catalog__filter-memory">
-                    <div class="catalog__filter-memory-item">64 Гб</div>
-                    <div class="catalog__filter-memory-item">128 Гб</div>
-                    <div class="catalog__filter-memory-item">256 Гб</div>
-                    <div class="catalog__filter-memory-item">512 Гб</div>
-                    <div class="catalog__filter-memory-item">1024 Гб</div>
+                    <div>
+                      <span class="catalog__filter-memory-item">64 Гб</span>
+                    </div>
+                    <div>
+                      <span class="catalog__filter-memory-item">128 Гб</span>
+                    </div>
+                    <div>
+                      <span class="catalog__filter-memory-item">256 Гб</span>
+                    </div>
+                    <div>
+                      <span class="catalog__filter-memory-item">512 Гб</span>
+                    </div>
+                    <div>
+                      <span class="catalog__filter-memory-item">1024 Гб</span>
+                    </div>
                   </div>
                   <div class="catalog__filter-title">Цвета</div>
                   <div class="catalog__filter-color">
                     <div class="catalog__filter-color-item">
-                      <span class="red"></span>
+                      <span title="Red" class="red"></span>
                     </div>
                     <div class="catalog__filter-color-item">
-                      <span class="black"></span>
+                      <span title="Black" class="black"></span>
                     </div>
                     <div class="catalog__filter-color-item">
-                      <span class="blue"></span>
+                      <span title="Blue" class="blue"></span>
+                    </div>
+                    <div class="catalog__filter-color-item">
+                      <span title="White" class="white"></span>
+                    </div>
+                    <div class="catalog__filter-color-item">
+                      <span title="Green" class="green"></span>
+                    </div>
+                    <div class="catalog__filter-color-item">
+                      <span title="Titanium Gray" class="gray"></span>
+                    </div>
+                    <div class="catalog__filter-color-item">
+                      <span title="Lavender" class="lavender"></span>
                     </div>
                   </div>
                   <div class="catalog__filter-button">
@@ -182,45 +231,7 @@
                   <div class="catalog__filter-button-reset">Сбросить</div>
                 </div>
                 <div class="catalog__items-catalog">
-                  <div class="catalog__items">
-                    <div class="catalog__items-item">
-                      <div class="catalog__items-item-img">
-                        <img
-                          src="./img/phones/iphone15-pro-white-titanium.jpeg"
-                          alt="iPhone-15-pro"
-                          class="catalog__items-item-photo"
-                        />
-                        <div class="catalog__items-item-btns">
-                          <button
-                            class="catalog__items-item-btn"
-                            aria-label="Показать информацию о товаре"
-                          >
-                            <img
-                              class="eye"
-                              src="./img/catalog/frame.svg"
-                              alt="1"
-                            />
-                          </button>
-                          <button
-                            class="catalog__items-item-btn"
-                            aria-label="Добавить товар в корзину"
-                          >
-                            <img
-                              class="basket"
-                              src="./img/catalog/basket.svg"
-                              alt="2"
-                            />
-                          </button>
-                        </div>
-                      </div>
-
-                      <div class="catalog__items-item-info">iPhone 15 Pro</div>
-                      <div class="catalog__items-item-price">90 000руб.</div>
-                    </div>
-                  </div>
-                  <div class="catalog__btn">
-                    <button class="catalog__button">Показать еще</button>
-                  </div>
+                  <div class="catalog__items"></div>
                 </div>
               </div>
             </section>
@@ -285,65 +296,22 @@
                     Заполните форму и наш<br />
                     менеджер свяжется с вами
                   </div>
-                  <!-- <form
-                    action="https://api.web3forms.com/submit"
-                    method="POST"
-                    id="form"
-                    class="questions__form"
-                    autocomplete="off"
-                  >
-                    <input
-                      type="hidden"
-                      name="access_key"
-                      value="754c2605-e08e-4afa-8a09-d77f27c0c065"
-                    />
-                    <div class="question__form-box">
-                      <input
-                        type="text"
-                        required
-                        id="name"
-                        name="Имя"
-                        placeholder="Ваше имя"
-                        class="questions__form-input"
-                      />
-                    </div>
-                    <div class="question__form-box">
-                      <input
-                        type="tel"
-                        required
-                        id="tel"
-                        name="Телефон"
-                        placeholder="+7(___) ___-__-__"
-                        class="questions__form-input"
-                      />
-                    </div>
-                    <div class="question__form-box">
-                      <textarea
-                        class="questions__form-area"
-                        required
-                        placeholder="Напишите ваш вопрос сюда ..."
-                        name="Сообщение"
-                        id="msg"
-                      ></textarea>
-                    </div>
-                    <button type="submit" class="questions__form-btn">
-                      Отправить
-                    </button>
-                  </form> -->
                   <form action="#" class="questions__form">
                     <input
                       data-validate-field="name"
-                      name="name"
+                      name="username"
                       type="text"
                       placeholder="Ваше имя"
                       class="questions__form-input"
+                      required
                     />
                     <input
                       data-validate-field="phone"
-                      name="tel"
+                      name="phone"
                       type="tel"
                       placeholder="+7 (___) ___-____"
                       class="questions__form-input"
+                      required
                     />
 
                     <textarea
@@ -351,6 +319,7 @@
                       name="message"
                       class="questions__form-area"
                       placeholder="Напишите ваш вопрос сюда ..."
+                      required
                     ></textarea>
                     <button class="questions__form-btn">Отправить</button>
                   </form>
@@ -405,55 +374,11 @@
           <div class="prod-modal__top">
             <div class="modal-slider">
               <div class="modal-slider__container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      class="modal-slider__img"
-                      src="./img/phones/iphone15-pro-white-titanium.jpeg"
-                      alt="1"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="modal-slider__img"
-                      src="./img/phones/iphone15-pro-white-titanium.jpeg"
-                      alt="1"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="modal-slider__img"
-                      src="./img/phones/iphone15-pro-white-titanium.jpeg"
-                      alt="1"
-                    />
-                  </div>
-                </div>
+                <div class="swiper-wrapper"></div>
               </div>
             </div>
             <div class="modal-info">
-              <div class="modal-info__wrapper">
-                <h3 class="modal-info__title">iPhone 15 Pro</h3>
-                <div class="modal-info__memory">
-                  <span class="modal-info__subtitle">HDD</span>
-                  <ul class="modal-info__memory-list modal-memory">
-                    <li class="modal-memory__item">
-                      <button class="modal-memory__btn">128Gb</button>
-                    </li>
-                    <li class="modal-memory__item">
-                      <button class="modal-memory__btn">256Gb</button>
-                    </li>
-                    <li class="modal-memory__item">
-                      <button class="modal-memory__btn">512Gb</button>
-                    </li>
-                    <li class="modal-memory__item">
-                      <button class="modal-memory__btn">1Tb</button>
-                    </li>
-                  </ul>
-                </div>
-                <div class="modal-info__price">
-                  <span class="modal-info__current-price">90 000руб</span>
-                </div>
-              </div>
+              <div class="modal-info__wrapper"></div>
               <button class="modal-info__order">Купить</button>
               <ul class="modal-info__note modal-note">
                 <li class="modal-note__item">* в наличии</li>
@@ -466,34 +391,7 @@
           <div class="prod-modal__bottom prod-bottom">
             <div class="prod-bottom__column">
               <h3 class="prod-bottom__title">Характеристики</h3>
-              <div class="prod-chars">
-                <div class="prod-bottom__descer prod-chars__item">
-                  <div class="prod-chars__item-title">Экран</div>
-                  <div class="prod-chars__item-params">
-                    6.1" (2556x1179) OLED 120 Гц
-                  </div>
-                </div>
-                <div class="prod-bottom__descer prod-chars__item">
-                  <div class="prod-chars__item-title">Камеры</div>
-                  <div class="prod-chars__item-params">
-                    3 камеры, основная 48 МП
-                  </div>
-                </div>
-                <div class="prod-bottom__descer prod-chars__item">
-                  <div class="prod-chars__item-title">Процессор</div>
-                  <div class="prod-chars__item-params">Apple A17 Pro</div>
-                </div>
-                <div class="prod-bottom__descer prod-chars__item">
-                  <div class="prod-chars__item-title">Стандарт связи</div>
-                  <div class="prod-chars__item-params">3G, 4G LTE, 5G</div>
-                </div>
-                <div class="prod-bottom__descer prod-chars__item">
-                  <div class="prod-chars__item-title">
-                    Тип разъема для зарядки
-                  </div>
-                  <div class="prod-chars__item-params">USB-C</div>
-                </div>
-              </div>
+              <div class="prod-chars"></div>
             </div>
           </div>
         </div>
@@ -536,13 +434,15 @@
           <form class="cart-modal__form">
             <input
               data-validate-field="name"
+              required
               name="name"
               type="text"
               placeholder="Ваше имя"
-              class="cart-modal__input"
+              class="cart-modal__input cart-modal__input--name"
             />
             <input
               data-validate-field="phone"
+              required
               name="tel"
               type="tel"
               placeholder="+7(___) ___-__-__"
@@ -550,15 +450,107 @@
             />
             <input
               data-validate-field="email"
+              required
               name="email"
               placeholder="E-mail"
-              class="cart-modal__input"
+              class="cart-modal__input cart-modal__input--email"
             />
             <button class="cart-modal__btn">Оформить заказ</button>
           </form>
         </div>
       </div>
     </div>
+    <div class="modal modal-authorization modal-login" data-active="false">
+      <div class="modal__content modal-authorization__inner modal-login__inner">
+        <div class="modal-authorization__top modal-login__top">
+          <div class="modal-authorization__title modal-login__title">Вход</div>
+          <button class="modal-authorization__exit modal-login__exit"></button>
+        </div>
+        <form class="modal-authorization__form modal-login__form">
+          <input
+            type="email"
+            required="true"
+            name="email"
+            class="modal-authorization__input modal-login__input modal-login__username"
+            placeholder="Ваш E-mail"
+          />
+          <input
+            type="password"
+            required="true"
+            name="password"
+            class="modal-authorization__input modal-login__input modal-login__password"
+            placeholder="Ваш пароль"
+          />
+          <button
+            type="submit"
+            class="modal-authorization__button modal-login__button button"
+          >
+            Войти
+          </button>
+        </form>
+        <div class="modal-authorization__bottom modal-login__bottom">
+          <div class="modal-authorization__noacc modal-login__noacc">
+            У вас нет аккаунта?
+          </div>
+          <div class="modal-authorization__auth modal-login__register">
+            Зарегистрироваться
+          </div>
+        </div>
+      </div>
+      <div class="modal-login__loading"></div>
+    </div>
+    <div class="modal modal-authorization modal-register" data-active="false">
+      <div
+        class="modal__content modal-authorization__inner modal-register__inner"
+      >
+        <div class="modal-authorization__top modal-register__top">
+          <div class="modal-authorization__title modal-register__title">
+            Регистрация
+          </div>
+          <button
+            class="modal-authorization__exit modal-register__exit"
+          ></button>
+        </div>
+        <form class="modal-authorization__form modal-register__form">
+          <input
+            type="text"
+            required="true"
+            name="username"
+            class="modal-authorization__input modal-register__input"
+            placeholder="Ваше имя"
+          />
+          <input
+            type="email"
+            required="true"
+            name="email"
+            class="modal-authorization__input modal-register__input"
+            placeholder="Ваш E-mail"
+          />
+          <input
+            type="password"
+            required="true"
+            name="password"
+            class="modal-authorization__input modal-register__input"
+            placeholder="Ваш пароль"
+          />
+          <button
+            type="submit"
+            class="modal-authorization__button modal-register__button button"
+          >
+            Зарегистрироваться
+          </button>
+        </form>
+        <div class="modal-authorization__bottom modal-register__bottom">
+          <div class="modal-authorization__noacc modal-register__noacc">
+            Уже есть аккаунт?
+          </div>
+          <div class="modal-authorization__auth modal-register__login">
+            Войти
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-orders"></div>
 
     <script src="./modules/swiper-bundle.min.js"></script>
     <script src="./modules/nouislider.min.js"></script>
@@ -567,8 +559,9 @@
     <script src="./modules/inputmask.min.js"></script>
     <script src="./modules/just-validate.min.js"></script>
     <script src="./js/range-slider.js"></script>
-    <script src="./js/products.js"></script>
+    <script type="module" src="./js/products.js"></script>
     <script src="./js/cart.js"></script>
     <script src="./js/validate.js"></script>
+    <script type="module" src="./js/filter.js"></script>
   </body>
 </html>

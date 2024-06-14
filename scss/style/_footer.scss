@@ -65,3 +65,13 @@
         }
     }
 }
+
+@media (max-width: 640px) {
+    .footer {
+        height: 200px;
+    }
+    .footer__wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

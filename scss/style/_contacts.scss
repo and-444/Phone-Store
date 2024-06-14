@@ -71,3 +71,45 @@
         }
     }
 }
+
+@media (max-width: 840px) {
+    .contacts__wrapper {
+        gap: 70px;
+    }
+
+    .contacts__map iframe {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 730px) {
+    .contacts {
+        padding: 0;
+    }
+    .contacts__wrapper {
+        padding: 25px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contacts__title {
+        font-size: 15px;
+    }
+
+    .contacts__main-ofice-main {
+        font-size: 12px;
+    }
+
+    .contacts__main-ofice-number {
+        font-size: 12px;
+    }
+
+    .contacts__map iframe {
+        width: 250px;
+        height: 250px;
+    }
+}
