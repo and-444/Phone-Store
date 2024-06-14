@@ -5,7 +5,9 @@ class Filter {
 
   async getProducts() {
     try {
-      const data = await fetch("http://localhost:3000/product/render");
+      const data = await fetch(
+        "https://phone-store-backend.onrender.com/product/render"
+      );
       const products = await data.json();
       return products;
     } catch (e) {

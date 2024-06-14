@@ -11,13 +11,21 @@ class Question {
     console.log(userName);
 
     try {
-      const res = await fetch("http://localhost:3000/question/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ userName, phone, message, date: formattedDate }),
-      });
+      const res = await fetch(
+        "https://phone-store-backend.onrender.com/question/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userName,
+            phone,
+            message,
+            date: formattedDate,
+          }),
+        }
+      );
 
       if (res.ok) {
         // eslint-disable-next-line no-alert

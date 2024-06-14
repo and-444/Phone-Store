@@ -153,7 +153,7 @@ function productModal() {
 
 if (catalogList) {
   const loadProducts = (quantity = 3) => {
-    fetch("http://localhost:3000/product/render")
+    fetch("https://phone-store-backend.onrender.com/product/render")
       .then((response) => {
         return response.json();
       })
@@ -171,7 +171,7 @@ if (catalogList) {
   loadProducts(prodQuantity);
 }
 const loadModalData = (id = 1) => {
-  fetch("http://localhost:3000/product/render")
+  fetch("https://phone-store-backend.onrender.com/product/render")
     .then((response) => {
       return response.json();
     })
@@ -371,7 +371,7 @@ function renderOrder(dataItem) {
 }
 
 const loadCartData = (id = 1, productName) => {
-  fetch("http://localhost:3000/product/render")
+  fetch("https://phone-store-backend.onrender.com/product/render")
     .then((response) => {
       return response.json();
     })

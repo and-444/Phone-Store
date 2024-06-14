@@ -37,21 +37,24 @@ class Order {
     totalSum = `${totalSum} ₽`;
 
     try {
-      const res = await fetch("http://localhost:3000/order/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `bearer ${token}`,
-        },
-        body: JSON.stringify({
-          userName,
-          phone,
-          email,
-          products: totalProducts,
-          totalSum,
-          date: formattedDate,
-        }),
-      });
+      const res = await fetch(
+        "https://phone-store-backend.onrender.com/order/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `bearer ${token}`,
+          },
+          body: JSON.stringify({
+            userName,
+            phone,
+            email,
+            products: totalProducts,
+            totalSum,
+            date: formattedDate,
+          }),
+        }
+      );
 
       if (res.ok) {
         alert("Отправлено");
@@ -72,11 +75,14 @@ class Order {
     const token = localStorage.getItem("userToken");
     this.products = products;
     try {
-      const res = await fetch("http://localhost:3000/order/get", {
-        headers: {
-          Authorization: `bearer ${token}`,
-        },
-      });
+      const res = await fetch(
+        "https://phone-store-backend.onrender.com/order/get",
+        {
+          headers: {
+            Authorization: `bearer ${token}`,
+          },
+        }
+      );
 
       if (res.ok) {
         const data = await res.json();
