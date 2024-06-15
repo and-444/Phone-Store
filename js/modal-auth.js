@@ -55,7 +55,7 @@ class Auth {
       const data = await res.json();
 
       if (res.ok) {
-        this.successLogin(data.token, data.userName, data.email);
+        this.successLogin(data.token, data.userName, email);
       } else {
         this.validateLogin(form, data.message);
       }
@@ -155,7 +155,7 @@ class Auth {
       target.classList.contains("modal-authorization") ||
       target.closest(".modal-authorization__exit")
     ) {
-      document.body.dataset.hidden = "false";
+      document.body.classList.remove("disable-scroll");
       modal.dataset.active = "false";
     } else if (target.classList.contains("modal-login__register")) {
       modal.dataset.active = "false";

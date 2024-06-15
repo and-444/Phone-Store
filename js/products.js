@@ -119,8 +119,6 @@ async function authUser() {
       !target.closest(".header__login")
     ) {
       userInfo.dataset.active = "false";
-    } else if (target.classList.contains("modal-info__orders")) {
-      console.log("1");
     } else if (target.classList.contains("modal-private__exit")) {
       auth.logout();
     }
@@ -407,6 +405,10 @@ const cartLogic = () => {
 
   productBtn.forEach((el) => {
     el.addEventListener("click", (e) => {
+      if (!localStorage.getItem("userToken")) {
+        document.body.classList.add("disable-scroll");
+        return auth.openModalLogin();
+      }
       const id = e.currentTarget.dataset.id;
 
       loadCartData(id, null);
@@ -525,10 +527,15 @@ questionsForm.addEventListener("submit", (e) => question.questionSend(e));
 const modalInfoOrder = document.querySelector(".modal-info__order");
 
 modalInfoOrder.addEventListener("click", (e) => {
-  const modalInfo = e.target.parentElement;
-  const productName = modalInfo.querySelector(".modal-info__title");
   const modalWrapper = document.querySelector(".graph-modal");
   const modalInner = document.querySelector(".graph-modal__container");
+  if (!localStorage.getItem("userToken")) {
+    modalWrapper.classList.remove("is-open");
+    modalInner.classList.remove("graph-modal-open", "fade", "animate-open");
+    return auth.openModalLogin();
+  }
+  const modalInfo = e.target.parentElement;
+  const productName = modalInfo.querySelector(".modal-info__title");
 
   loadCartData(null, productName.textContent);
   alert("Товар добавлен в корзину");
