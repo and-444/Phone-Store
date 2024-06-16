@@ -13,14 +13,11 @@ class Auth {
     if (!token) return;
 
     try {
-      const res = await fetch(
-        "https://phone-store-backend.onrender.com/auth/user",
-        {
-          headers: {
-            Authorization: `bearer ${token}`,
-          },
-        }
-      );
+      const res = await fetch("http://localhost:3000/auth/user", {
+        headers: {
+          Authorization: `bearer ${token}`,
+        },
+      });
 
       if (res.ok) {
         const data = await res.json();
@@ -41,16 +38,13 @@ class Auth {
     const userObj = { email, password };
 
     try {
-      const res = await fetch(
-        "https://phone-store-backend.onrender.com/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(userObj),
-        }
-      );
+      const res = await fetch("http://localhost:3000/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userObj),
+      });
 
       const data = await res.json();
 
@@ -72,16 +66,13 @@ class Auth {
     const userObj = { username, email, password };
 
     try {
-      const res = await fetch(
-        "https://phone-store-backend.onrender.com/auth/registration",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(userObj),
-        }
-      );
+      const res = await fetch("http://localhost:3000/auth/registration", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userObj),
+      });
 
       if (res.ok) {
         this.successRegister();
@@ -117,6 +108,7 @@ class Auth {
     localStorage.setItem("userToken", token);
     this.wrapperLogin.dataset.active = "false";
     document.body.dataset.hidden = "false";
+    document.body.classList.remove("disable-scroll");
 
     const inputUserName = document.querySelector(".questions__form-input");
     const orderName = document.querySelector(".cart-modal__input--name");
